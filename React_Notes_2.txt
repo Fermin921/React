@@ -1,0 +1,46 @@
+
+Para usar el fecth api seria de la siguiente manera:
+DEbemos tener la api key de donde consultaremos en una constante
+
+Ahora definir la url a la que se hara la peticion: 
+const peticion = fecth("Link_de_api_cin_api_key")
+
+Aqui sera la manera de utilizarlo y agregando la logica dependiendo de los objetos que respuesta que se nos brinde de la peticion 
+peticion
+.then(resp => resp.json())
+.then({data}) => {
+    const {url } = data.images.original;
+
+    const img = document.createElement("img");
+    img.src = url;
+}
+.catch(console.warn);
+
+Ejemplo de las promesas 
+const getImagenPromesa = () => {
+    const promesa = new Promise (resolve,reject) => {
+        resolve('link_consulta');
+    }
+}
+
+getImagenPromesa().then(console.log);
+
+
+Ejemplo de una funcion asyncrona y lleva de la mano await cuando se utiliza asyn
+const getImage = async () => {
+    return (getImage());
+}
+Ejemplo de una funcion asyncrona implementando el await para el fetch
+const getImage = async () => {
+    const apiKey = 'llave de la api para hacer peticion'
+    const resp = await fecth('link de la consulta con la api key)
+    const data = await resp.json();
+    //Una manera de destructurar la data y no repetir sintaxis para poder mostrar una imagen de la peticion
+    const {data} = await resp.json();
+
+    const img = document.createElement('img');
+    img.src = url;
+    document.body.append(img);
+    console.log(data)
+}
+
