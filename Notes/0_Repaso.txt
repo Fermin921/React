@@ -43,4 +43,3 @@ const getImage = async () => {
     document.body.append(img);
     console.log(data)
 }
-

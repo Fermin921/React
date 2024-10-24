@@ -1,0 +1,25 @@
+
+
+Comunicacion entre componentes: 
+
+Propiertys son las propiedades mandadas a los componentes que suelen escribirse como "props" 
+Comunmente se usa la destructuracion para obtener cierto dato  
+
+Permite comunicar la raiz o padre con el componente hijo 
+
+Ejemplo: 
+export const AppExample = {props o directamente el nombre "title"} => {
+    console.log(props);
+
+    return {
+        <> {parameter} props: any 
+            <h1> {props.title}</h1>
+            {}
+            <p> Soy un subtitulo</p>
+            </>
+    }
+}
+
+Los props serian declarados por asi decirlo, en el main y dentro de la etiqueta por ejempplo:
+<div title=""> 
+
