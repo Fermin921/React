@@ -23,3 +23,19 @@ export const AppExample = {props o directamente el nombre "title"} => {
 Los props serian declarados por asi decirlo, en el main y dentro de la etiqueta por ejempplo:
 <div title=""> 
 
+Hooks: 
+Es una función que te permite "engancharte" a las características 
+del ciclo de vida y del estado de los componentes funcionales. 
+
+Los hooks más comunes son:
+useState: Permite agregar estado local a un componente funcional.
+const [count, setCount] = useState(0);
+
+useEffect: Permite realizar efectos secundarios, como fetch de datos, suscripciones, o manipulaciones del DOM. Se ejecuta después de que el componente se renderiza.
+useEffect(() => {
+  // código del efecto
+}, [dependencias]);
+
+useContext: Permite acceder al contexto en un componente funcional, facilitando la gestión de datos globales.
+useReducer: Es útil para manejar estados complejos y es similar a Redux en su forma de trabajar.
+useRef: Permite crear una referencia mutable que persiste durante el ciclo de vida del componente, útil para acceder a elementos del DOM.

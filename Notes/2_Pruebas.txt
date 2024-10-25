@@ -1,0 +1,26 @@
+
+Pruebas unitarias: 
+Enfocadas en pequeñas funcionlidades
+
+Pruebas de integracion: Enfocadas en como 
+reaccionan varias piezas en conjunto. 
+
+AAA: 
+Arrange - arreglar: 
+Paso donde se establece el paso inicial
+Abarca: 
+-Inicializacion de variables
+-Importaciones necesarias
+
+Act - actuar: 
+Donde vamos a aplicar acciones o estimulos al objeto a probar
+Abarca:
+-Llamar metodos
+-Simular clics o interacciones
+-Realizar acciones sobre el primero paso o etapa.
+
+Assert - Afirmar:
+Observa el resultado
+Si los resultados son los esperados o no 
+
+Jest-Expect_Tobe 
