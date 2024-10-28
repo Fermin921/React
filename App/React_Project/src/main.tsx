@@ -1,11 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+//import "./index.css";
 //import App from "./App.tsx";
+import "./index.css";
 
-import CounterApp from "./components/CounterApp/CounterApp.tsx";
+import { GifExpertApp } from "./components/GifExpertApp/GifExpertApp.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <CounterApp value={8} />
+    <GifExpertApp />
   </StrictMode>
 );

@@ -1,0 +1,4 @@
+
+
+con el snippet rafc se crea de manera mas rapida el componente.
+
