@@ -2,10 +2,12 @@ import React, { useState } from "react";
 
 // Definimos el tipo para las props del componente
 interface AddCategoryProps {
-  onCategories: React.Dispatch<React.SetStateAction<string[]>>;
+  onNewCategories: (value: string) => void; // Cambié el tipo para reflejar correctamente la función
 }
 
-export const AddCategory: React.FC<AddCategoryProps> = ({ onCategories }) => {
+export const AddCategory: React.FC<AddCategoryProps> = ({
+  onNewCategories,
+}) => {
   const [value, setValue] = useState<string>("");
 
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +19,7 @@ export const AddCategory: React.FC<AddCategoryProps> = ({ onCategories }) => {
     console.log(value); // Aquí maneja el valor al enviar el formulario
 
     // Llama a la función que recibe el nuevo valor
-    onCategories((categories) => [value, ...categories]);
+    onNewCategories(value); // Llama directamente a onNewCategories con el valor
     setValue(""); // Limpia el input después de enviar
   };
 

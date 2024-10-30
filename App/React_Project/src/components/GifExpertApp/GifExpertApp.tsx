@@ -1,24 +1,27 @@
 import React, { useState } from "react";
-import { ButtonWithIcon } from "./button2";
 import { AddCategory } from "./AddCategory";
+import "./css/GifExpertApp.css";
+import { GifGrid } from "./GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["categories", "setCategories"]);
+  const [categories, setCategories] = useState<string[]>([]);
 
-  const onAddCategory = () => {
-    setCategories([...categories, "nueva categoria"]); //Se hace una copia del arreglo y se agregar el segundo valor al arreglo
+  const onAddCategory = (value: string) => {
+    if (value.trim().length > 0) {
+      setCategories([...categories, value]);
+    }
   };
 
   return (
-    <>
+    <div className="card">
       <h1>GifExpertApp</h1>
-      <AddCategory onCategories={setCategories} />
-      <br></br>
-      <ol>
-        {categories.map((category: string) => (
-          <li key={category}>{category}</li>
+      <AddCategory onNewCategories={onAddCategory} />
+      <br />
+      <ul>
+        {categories.map((category) => (
+          <GifGrid key={category} category={category} />
         ))}
-      </ol>
-    </>
+      </ul>
+    </div>
   );
 };
