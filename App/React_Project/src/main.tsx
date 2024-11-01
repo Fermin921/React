@@ -5,8 +5,9 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import { GifExpertApp } from "./components/GifExpertApp/GifExpertApp.tsx";
+import { Header } from "./components/Prueba_Doc_EQ/Header.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <GifExpertApp />
+    <Header />
   </StrictMode>
 );

@@ -1,0 +1,4 @@
+
+UseEffect: 
+Es utilizado para disparar efectos secundarios, recibe una funcion como argumento y tiene un callback interno
+Se manda llamar cada que redibuje el componente
